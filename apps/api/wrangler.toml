@@ -8,14 +8,11 @@ compatibility_flags = [ "nodejs_compat" ]
 pattern = "md-api.tangzhihong.com"
 custom_domain = true
 
-# D1 数据库绑定。
-# database_id 为 doocs/md 官方部署所用实例（资源标识符，非密钥）。
-# 自行部署（fork）时请执行 `wrangler d1 create md-sync`，
-# 并把返回的 database_id 替换为你自己的实例 ID。
+# D1 数据库绑定（self-hosted 实例，资源标识符非密钥）。
 [[d1_databases]]
 binding = "DB"
 database_name = "md-sync"
-database_id = "d7659e81-8fda-4abc-b128-f7a5975f7a7d"
+database_id = "68031817-5534-4173-9045-ce1b97f48efa"
 migrations_dir = "migrations"
 
 # 分享页静态资源（favicon 等）
