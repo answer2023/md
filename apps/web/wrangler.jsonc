@@ -5,6 +5,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "md",
+  "routes": [
+    { "pattern": "md.tangzhihong.com", "custom_domain": true }
+  ],
   "compatibility_date": "2025-09-06",
   "main": "worker/index.ts",
   "assets": {

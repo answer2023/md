@@ -3,9 +3,9 @@ main = "./src/index.ts"
 compatibility_date = "2024-11-01"
 compatibility_flags = [ "nodejs_compat" ]
 
-# 自定义域名（zone doocs.org 需在同一 Cloudflare 账号下，部署时自动创建 DNS）
+# 自定义域名（zone tangzhihong.com 在同一 Cloudflare 账号下，部署时自动创建 DNS）
 [[routes]]
-pattern = "md-api.doocs.org"
+pattern = "md-api.tangzhihong.com"
 custom_domain = true
 
 # D1 数据库绑定。
@@ -28,7 +28,7 @@ binding = "ASSETS"
 # 前端来源白名单，用于 CORS 与「登录后回跳到发起方」。
 # 支持通配符 `*`（匹配单个主机标签）。第一个非通配项作为默认回跳地址。
 # - 生产站、Gitee Pages、Cloudflare Workers、本地开发、PR 预览
-APP_URL = "https://md.doocs.org,https://doocs.gitee.io,https://md.doocs.workers.dev,http://localhost:5173,https://md-pr-*.doocs.workers.dev,https://doocs-md-preview-pr-*.surge.sh,https://*.chromiumapp.org,https://*.extensions.allizom.org,https://*.microsoftedgeextension.net"
+APP_URL = "https://md.tangzhihong.com,http://localhost:5173"
 
 # 爱发电创作者 user_id（开发者后台可见，非密钥）
 AFDIAN_USER_ID = "f001c5a8655111f18f5e52540025c377"
@@ -36,7 +36,8 @@ AFDIAN_USER_ID = "f001c5a8655111f18f5e52540025c377"
 AFDIAN_PRO_PLAN_IDS = "81efdc48655711f18b6d52540025c377,ced9acca655a11f1a7cc52540025c377,df5084a2655a11f1bea45254001e7c00"
 
 # 默认图床上传 API（UPLOAD_ENABLED + 前端 VITE_UPLOAD_VIA_API 共同控制）
-UPLOAD_ENABLED = "true"
+# Self-hosted deployment: official shared image hosting disabled, configure your own in the frontend.
+UPLOAD_ENABLED = "false"
 UPLOAD_BACKEND = "github"
 UPLOAD_GITHUB_USERNAME = "bucketio"
 # 留空则默认 img0–img19
