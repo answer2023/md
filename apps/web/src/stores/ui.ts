@@ -15,7 +15,8 @@ export const useUIStore = defineStore(`ui`, () => {
 
   const isOpenRightSlider = store.reactive(addPrefix(`is_open_right_slider`), false)
 
-  const isOpenPostSlider = store.reactive(addPrefix(`is_open_post_slider`), false)
+  // mdnice-style: post list sidebar is visible by default on first visit
+  const isOpenPostSlider = store.reactive(addPrefix(`is_open_post_slider`), true)
 
   const isOpenFolderPanel = store.reactive(addPrefix(`is_open_folder_panel`), false)
 
