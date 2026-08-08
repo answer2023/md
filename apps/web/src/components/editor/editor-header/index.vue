@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Copy, Loader2, Menu, Palette } from '@lucide/vue'
+import { ChevronDown, Copy, Loader2, Menu, Palette } from '@lucide/vue'
 import { defineAsyncComponent } from 'vue'
 import { useEditorRefresh } from '@/composables/useEditorRefresh'
 import { delay } from '@/lib/delay'
@@ -221,6 +221,58 @@ function copyToWeChat() {
   copyMode.value = 'txt'
   copy()
 }
+
+/**
+ * Copy clean semantic HTML (no inline styles) as rich text for Zhihu.
+ * Zhihu's editor applies its own typography, so structure-only HTML pastes best.
+ */
+async function copyToZhihu() {
+  isCopying.value = true
+  try {
+    const mdContent = editor.value?.state.doc.toString() || ``
+    const pureHtml = await generatePureHTML(mdContent)
+    try {
+      if (typeof ClipboardItem === `undefined`) {
+        throw new TypeError(`ClipboardItem is not supported in this browser.`)
+      }
+      await writeClipboardItems([
+        new ClipboardItem({
+          'text/html': new Blob([pureHtml], { type: `text/html` }),
+          'text/plain': new Blob([mdContent], { type: `text/plain` }),
+        }),
+      ])
+    }
+    catch (error) {
+      if (!fallbackCopyUsingExecCommand(pureHtml)) {
+        toast.error(t(`toast.copyFailed`, { message: normalizeErrorMessage(error) }))
+        return
+      }
+    }
+    toast.success(t(`toast.copiedForZhihu`))
+  }
+  catch (error) {
+    toast.error(t(`toast.copyFailed`, { message: normalizeErrorMessage(error) }))
+  }
+  finally {
+    isCopying.value = false
+  }
+}
+
+/** Copy raw Markdown source for Juejin, whose editor is Markdown-native. */
+async function copyToJuejin() {
+  isCopying.value = true
+  try {
+    const mdContent = editor.value?.state.doc.toString() || ``
+    await copyContent(mdContent)
+    toast.success(t(`toast.copiedForJuejin`))
+  }
+  catch (error) {
+    toast.error(t(`toast.copyFailed`, { message: normalizeErrorMessage(error) }))
+  }
+  finally {
+    isCopying.value = false
+  }
+}
 </script>
 
 <template>
@@ -259,18 +311,43 @@ function copyToWeChat() {
     </div>
 
     <div class="flex flex-wrap items-center gap-2">
-      <Button
-        variant="outline"
-        class="h-9 max-md:w-9 max-md:px-0"
-        :disabled="isCopying"
-        :aria-busy="isCopying"
-        :aria-label="t('header.copy')"
-        @click="copyToWeChat"
-      >
-        <Loader2 v-if="isCopying" class="h-4 w-4 animate-spin md:mr-2" />
-        <Copy v-else class="h-4 w-4 md:hidden" />
-        <span class="max-md:hidden">{{ t('header.copy') }}</span>
-      </Button>
+      <div class="flex items-center">
+        <Button
+          variant="outline"
+          class="h-9 rounded-r-none max-md:w-9 max-md:px-0"
+          :disabled="isCopying"
+          :aria-busy="isCopying"
+          :aria-label="t('header.copy')"
+          @click="copyToWeChat"
+        >
+          <Loader2 v-if="isCopying" class="h-4 w-4 animate-spin md:mr-2" />
+          <Copy v-else class="h-4 w-4 md:hidden" />
+          <span class="max-md:hidden">{{ t('header.copy') }}</span>
+        </Button>
+        <DropdownMenu :modal="false">
+          <DropdownMenuTrigger as-child>
+            <Button
+              variant="outline"
+              class="h-9 w-7 rounded-l-none border-l-0 px-0"
+              :disabled="isCopying"
+              :aria-label="t('header.copyTargets')"
+            >
+              <ChevronDown class="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" class="z-200">
+            <DropdownMenuItem @click="copyToWeChat">
+              {{ t('header.copyToWechat') }}
+            </DropdownMenuItem>
+            <DropdownMenuItem @click="copyToZhihu">
+              {{ t('header.copyToZhihu') }}
+            </DropdownMenuItem>
+            <DropdownMenuItem @click="copyToJuejin">
+              {{ t('header.copyToJuejin') }}
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
 
       <PostInfo class="hidden md:inline-flex" />
 
