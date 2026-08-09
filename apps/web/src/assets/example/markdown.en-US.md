@@ -367,5 +367,5 @@ Open your Markdown editor and start creating. Explore Markdown — it is more de
 ---
 
 <center>
-    <img src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/1648303220922-7e14aefa-816e-44c1-8604-ade709ca1c69.png" alt="qr code" style="width: 100px;">
+    <img src="https://md.tangzhihong.com/assets/wechat-mp-qrcode.jpg" alt="qr code" style="width: 100px;">
 </center>
