@@ -92,10 +92,13 @@ authRoutes.get(`/github/callback`, async (c) => {
       redirect_uri: callbackUrl(c),
     }),
   })
-  const tokenJson = await tokenRes.json<{ access_token?: string }>()
+  const tokenJson = await tokenRes.json<{ access_token?: string, error?: string, error_description?: string }>()
   const accessToken = tokenJson.access_token
-  if (!accessToken)
+  if (!accessToken) {
+    // GitHub's error body (e.g. incorrect_client_credentials) — no secrets involved
+    console.error(`oauth exchange failed:`, tokenRes.status, tokenJson.error, tokenJson.error_description)
     return c.json({ error: `oauth_exchange_failed` }, 400)
+  }
 
   // GitHub API requires a User-Agent header
   const userRes = await fetch(`https://api.github.com/user`, {
