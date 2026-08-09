@@ -1,0 +1,160 @@
+/**
+ * Newsprint theme — warm paper background with serif type,
+ * in the spirit of classic newspaper reading layouts.
+ * Original implementation for this project.
+ * Use var(--md-primary-color) for theme color instead of hard-coded values.
+ */
+
+/* ==================== Container ==================== */
+section,
+#output .container {
+  background: #f3f2ee;
+}
+
+/* ==================== H1 ==================== */
+h1 {
+  margin: 1.8em 8px 1em;
+  color: #1f1f1f;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: calc(var(--md-font-size) * 1.45);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* ==================== H2 ==================== */
+h2 {
+  margin: 2.4em 8px 1em;
+  padding-bottom: 0.25em;
+  color: #1f1f1f;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: calc(var(--md-font-size) * 1.25);
+  font-weight: bold;
+  border-bottom: 1px solid #c9c7c0;
+}
+
+/* ==================== H3 ==================== */
+h3 {
+  margin: 1.9em 8px 0.8em 0;
+  color: #1f1f1f;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: calc(var(--md-font-size) * 1.1);
+  font-weight: bold;
+}
+
+/* ==================== H4 ==================== */
+h4 {
+  margin: 1.6em 8px 0.6em;
+  color: #1f1f1f;
+  font-size: var(--md-font-size);
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* ==================== Paragraph ==================== */
+p {
+  margin: 1.2em 8px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: #2a2a2a;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  text-align: justify;
+}
+
+/* ==================== Blockquote ==================== */
+blockquote {
+  font-style: italic;
+  margin: 1.4em 1.2em;
+  padding: 0.2em 1em;
+  border-left: 2px solid #8a877e;
+  color: #55524b;
+  background: transparent;
+}
+
+blockquote > p {
+  margin: 0.7em 0;
+  color: #55524b;
+}
+
+/* ==================== Emphasis ==================== */
+strong {
+  color: #1f1f1f;
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* ==================== Links ==================== */
+a {
+  color: var(--md-primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--md-primary-color);
+}
+
+/* ==================== Lists ==================== */
+ul,
+ol {
+  margin: 1.2em 8px;
+  padding-left: 1.6em;
+  color: #2a2a2a;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+}
+
+li {
+  margin: 0.35em 0;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+/* ==================== Horizontal rule ==================== */
+hr {
+  border: none;
+  border-top: 1px solid #c9c7c0;
+  margin: 2.2em 8px;
+}
+
+/* ==================== Inline code ==================== */
+p code,
+li code {
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  color: #1f1f1f;
+  background: #e8e6df;
+  font-size: 0.88em;
+}
+
+/* ==================== Images ==================== */
+img {
+  border: 1px solid #d8d6cf;
+  padding: 3px;
+  background: #fff;
+}
+
+figcaption {
+  margin-top: 0.6em;
+  color: #8a877e;
+  font-size: 0.85em;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ==================== Tables ==================== */
+table {
+  border-collapse: collapse;
+  margin: 1.3em 8px;
+}
+
+th {
+  border-top: 2px solid #1f1f1f;
+  border-bottom: 1px solid #1f1f1f;
+  color: #1f1f1f;
+  font-weight: bold;
+  padding: 0.5em 0.9em;
+}
+
+td {
+  padding: 0.5em 0.9em;
+  border-bottom: 1px solid #d8d6cf;
+}

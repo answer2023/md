@@ -205,6 +205,8 @@ export default {
       sunset: { label: `暖橙`, desc: `mdnice 風` },
       fresh: { label: `青葱`, desc: `mdnice 風` },
       ink: { label: `墨韻`, desc: `マガジン` },
+      typodoc: { label: `ドキュメント`, desc: `Typora 風` },
+      newsprint: { label: `新聞紙`, desc: `Typora 風` },
     },
     fontFamily: {
       sansSerif: { label: `ゴシック`, desc: `Font123Abc` },

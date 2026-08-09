@@ -7,8 +7,10 @@ import defaultCSS from './default.css?raw'
 import freshCSS from './fresh.css?raw'
 import graceCSS from './grace.css?raw'
 import inkCSS from './ink.css?raw'
+import newsprintCSS from './newsprint.css?raw'
 import simpleCSS from './simple.css?raw'
 import sunsetCSS from './sunset.css?raw'
+import typodocCSS from './typodoc.css?raw'
 
 export const baseCSSContent = baseCSS
 
@@ -20,6 +22,8 @@ export const themeMap = {
   sunset: sunsetCSS,
   fresh: freshCSS,
   ink: inkCSS,
+  typodoc: typodocCSS,
+  newsprint: newsprintCSS,
 } as const
 
 export type BuiltinThemeName = keyof typeof themeMap

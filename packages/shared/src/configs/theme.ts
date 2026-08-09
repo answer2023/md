@@ -45,6 +45,16 @@ export const themeOptionsMap = {
     value: `ink`,
     desc: `杂志长文`,
   },
+  typodoc: {
+    label: `文稿`,
+    value: `typodoc`,
+    desc: `Typora 风`,
+  },
+  newsprint: {
+    label: `报刊`,
+    value: `newsprint`,
+    desc: `Typora 风`,
+  },
 }
 
 export const themeOptions: IConfigOption<ThemeName>[] = [
@@ -82,5 +92,15 @@ export const themeOptions: IConfigOption<ThemeName>[] = [
     label: `墨韵`,
     value: `ink`,
     desc: `杂志长文`,
+  },
+  {
+    label: `文稿`,
+    value: `typodoc`,
+    desc: `Typora 风`,
+  },
+  {
+    label: `报刊`,
+    value: `newsprint`,
+    desc: `Typora 风`,
   },
 ]

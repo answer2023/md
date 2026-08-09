@@ -205,6 +205,8 @@ export default {
       sunset: { label: `Sunset`, desc: `mdnice style` },
       fresh: { label: `Fresh`, desc: `mdnice style` },
       ink: { label: `Ink`, desc: `magazine` },
+      typodoc: { label: `Document`, desc: `Typora style` },
+      newsprint: { label: `Newsprint`, desc: `Typora style` },
     },
     fontFamily: {
       sansSerif: { label: `Sans`, desc: `Font123Abc` },

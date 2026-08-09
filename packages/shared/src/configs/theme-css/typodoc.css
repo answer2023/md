@@ -1,0 +1,146 @@
+/**
+ * Typodoc theme — clean document style in the spirit of desktop
+ * Markdown editors: quiet headings, generous spacing, unobtrusive chrome.
+ * Original implementation for this project.
+ * Use var(--md-primary-color) for theme color instead of hard-coded values.
+ */
+
+/* ==================== H1 ==================== */
+h1 {
+  margin: 1.8em 8px 1em;
+  padding-bottom: 0.3em;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 1.5);
+  font-weight: bold;
+  line-height: 1.4;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* ==================== H2 ==================== */
+h2 {
+  margin: 2.2em 8px 1em;
+  padding-bottom: 0.3em;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 1.3);
+  font-weight: bold;
+  line-height: 1.4;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* ==================== H3 ==================== */
+h3 {
+  margin: 1.8em 8px 0.8em 0;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 1.15);
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* ==================== H4 ==================== */
+h4 {
+  margin: 1.6em 8px 0.6em;
+  color: hsl(var(--foreground));
+  font-size: var(--md-font-size);
+  font-weight: bold;
+}
+
+/* ==================== Paragraph ==================== */
+p {
+  margin: 1.1em 8px;
+  line-height: 1.75;
+  color: hsl(var(--foreground));
+}
+
+/* ==================== Blockquote ==================== */
+blockquote {
+  font-style: normal;
+  margin: 1.2em 8px;
+  padding: 0.1em 1em;
+  border-left: 4px solid #dfe2e5;
+  color: #6a737d;
+  background: transparent;
+}
+
+blockquote > p {
+  margin: 0.7em 0;
+  color: #6a737d;
+}
+
+/* ==================== Emphasis ==================== */
+strong {
+  color: hsl(var(--foreground));
+  font-weight: bold;
+}
+
+/* ==================== Links ==================== */
+a {
+  color: var(--md-primary-color);
+  text-decoration: none;
+}
+
+/* ==================== Lists ==================== */
+ul,
+ol {
+  margin: 1.1em 8px;
+  padding-left: 1.7em;
+  color: hsl(var(--foreground));
+}
+
+li {
+  margin: 0.3em 0;
+  line-height: 1.75;
+}
+
+/* ==================== Horizontal rule ==================== */
+hr {
+  border: none;
+  height: 3px;
+  margin: 2em 8px;
+  background: #f0f0f0;
+  border-radius: 2px;
+}
+
+/* ==================== Inline code ==================== */
+p code,
+li code {
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: hsl(var(--foreground));
+  background: rgba(0, 0, 0, 0.05);
+  font-size: 0.88em;
+}
+
+/* ==================== Images ==================== */
+img {
+  border-radius: 3px;
+}
+
+figcaption {
+  margin-top: 0.5em;
+  color: #8b949e;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+/* ==================== Tables ==================== */
+table {
+  border-collapse: collapse;
+  margin: 1.2em 8px;
+}
+
+th {
+  background: #f6f8fa;
+  color: hsl(var(--foreground));
+  font-weight: bold;
+  padding: 0.45em 0.9em;
+  border: 1px solid #dfe2e5;
+}
+
+td {
+  padding: 0.45em 0.9em;
+  border: 1px solid #dfe2e5;
+}
+
+tr:nth-child(even) td {
+  background: #fafbfc;
+}
