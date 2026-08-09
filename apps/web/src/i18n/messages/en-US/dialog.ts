@@ -115,7 +115,7 @@ export default {
   },
   fund: {
     title: `Support`,
-    description: `If this tool helped you write something better, buy me a coffee ☕`,
+    description: `If this tool helps, buy me a coffee ☕`,
     qrAlt: `WeChat reward QR code`,
   },
   markdownHelp: {

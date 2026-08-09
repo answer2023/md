@@ -115,7 +115,7 @@ export default {
   },
   fund: {
     title: `サポート`,
-    description: `このツールでより良い記事が書けたなら、コーヒーを一杯おごってください ☕`,
+    description: `役に立ったら、コーヒーを一杯どうぞ ☕`,
     qrAlt: `微信投げ銭 QR コード`,
   },
   markdownHelp: {
