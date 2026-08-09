@@ -55,6 +55,26 @@ export const themeOptionsMap = {
     value: `newsprint`,
     desc: `Typora 风`,
   },
+  warmpaper: {
+    label: `暖笺`,
+    value: `warmpaper`,
+    desc: `Claude 风`,
+  },
+  mistblue: {
+    label: `雾蓝`,
+    value: `mistblue`,
+    desc: `Typora 风`,
+  },
+  gothic: {
+    label: `哥特`,
+    value: `gothic`,
+    desc: `Typora 风`,
+  },
+  purpletea: {
+    label: `紫青`,
+    value: `purpletea`,
+    desc: `Typora 风`,
+  },
 }
 
 export const themeOptions: IConfigOption<ThemeName>[] = [
@@ -101,6 +121,26 @@ export const themeOptions: IConfigOption<ThemeName>[] = [
   {
     label: `报刊`,
     value: `newsprint`,
+    desc: `Typora 风`,
+  },
+  {
+    label: `暖笺`,
+    value: `warmpaper`,
+    desc: `Claude 风`,
+  },
+  {
+    label: `雾蓝`,
+    value: `mistblue`,
+    desc: `Typora 风`,
+  },
+  {
+    label: `哥特`,
+    value: `gothic`,
+    desc: `Typora 风`,
+  },
+  {
+    label: `紫青`,
+    value: `purpletea`,
     desc: `Typora 风`,
   },
 ]

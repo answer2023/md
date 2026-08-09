@@ -207,6 +207,10 @@ export default {
       ink: { label: `Ink`, desc: `magazine` },
       typodoc: { label: `Document`, desc: `Typora style` },
       newsprint: { label: `Newsprint`, desc: `Typora style` },
+      warmpaper: { label: `Warmpaper`, desc: `Claude style` },
+      mistblue: { label: `Mist Blue`, desc: `Typora style` },
+      gothic: { label: `Gothic`, desc: `Typora style` },
+      purpletea: { label: `Purple Tea`, desc: `Typora style` },
     },
     fontFamily: {
       sansSerif: { label: `Sans`, desc: `Font123Abc` },

@@ -207,6 +207,10 @@ export default {
       ink: { label: `墨韻`, desc: `マガジン` },
       typodoc: { label: `ドキュメント`, desc: `Typora 風` },
       newsprint: { label: `新聞紙`, desc: `Typora 風` },
+      warmpaper: { label: `暖箋`, desc: `Claude 風` },
+      mistblue: { label: `霧藍`, desc: `Typora 風` },
+      gothic: { label: `ゴシック`, desc: `Typora 風` },
+      purpletea: { label: `紫青`, desc: `Typora 風` },
     },
     fontFamily: {
       sansSerif: { label: `ゴシック`, desc: `Font123Abc` },
