@@ -110,8 +110,8 @@ export default {
   about: {
     title: `關於`,
     description: `一款高度簡潔的微信 Markdown 編輯器`,
-    followHint: `掃碼關注公眾號 Doocs，原創技術內容第一時間推送！`,
-    imageAlt: `Doocs Markdown 編輯器`,
+    followHint: `掃碼關注我的微信公眾號，文章更新第一時間推送。`,
+    imageAlt: `微信公眾號二維碼`,
   },
   fund: {
     title: `讚賞`,

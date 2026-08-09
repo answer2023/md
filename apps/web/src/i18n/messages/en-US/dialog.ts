@@ -110,8 +110,8 @@ export default {
   about: {
     title: `About`,
     description: `A minimalist Markdown editor for WeChat Official Accounts`,
-    followHint: `Scan the QR code to follow Doocs on WeChat for original tech content.`,
-    imageAlt: `Doocs Markdown Editor`,
+    followHint: `Scan the QR code to follow my WeChat official account.`,
+    imageAlt: `WeChat official account QR code`,
   },
   fund: {
     title: `Support`,

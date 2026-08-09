@@ -110,8 +110,8 @@ export default {
   about: {
     title: `このアプリについて`,
     description: `微信公式アカウント向けのシンプルな Markdown エディター`,
-    followHint: `QR コードをスキャンして Doocs の微信公式アカウントをフォローし、オリジナルの技術コンテンツを受け取りましょう。`,
-    imageAlt: `Doocs Markdown エディター`,
+    followHint: `QR コードをスキャンして私の微信公式アカウントをフォローしてください。`,
+    imageAlt: `微信公式アカウントの QR コード`,
   },
   fund: {
     title: `サポート`,

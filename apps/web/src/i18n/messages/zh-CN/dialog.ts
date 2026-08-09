@@ -110,8 +110,8 @@ export default {
   about: {
     title: `关于`,
     description: `一款高度简洁的微信 Markdown 编辑器`,
-    followHint: `扫码关注公众号 Doocs，原创技术内容第一时间推送！`,
-    imageAlt: `Doocs Markdown 编辑器`,
+    followHint: `扫码关注我的微信公众号，文章更新第一时间推送。`,
+    imageAlt: `微信公众号二维码`,
   },
   fund: {
     title: `赞赏`,

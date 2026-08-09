@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ExternalLink, HelpCircle } from '@lucide/vue'
 import { computed } from 'vue'
+import wechatMpQrcode from '@/assets/images/wechat-mp-qrcode.jpg'
 import PanelDialog from '@/components/shared/panel-dialog/PanelDialog.vue'
 import { Button } from '@/components/ui/button'
 
@@ -43,7 +44,7 @@ function onRedirect(url: string) {
       </p>
       <img
         class="mx-auto max-w-[200px] rounded-xl ring-1 ring-border"
-        src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/1648303220922-7e14aefa-816e-44c1-8604-ade709ca1c69.png"
+        :src="wechatMpQrcode"
         :alt="t('about.imageAlt')"
       >
       <div class="grid grid-cols-3 gap-2">
