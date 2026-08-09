@@ -201,6 +201,10 @@ export default {
       default: { label: `Classic`, desc: `` },
       grace: { label: `Grace`, desc: `{'@'}brzhang` },
       simple: { label: `Simple`, desc: `{'@'}okooo5km` },
+      azure: { label: `Azure`, desc: `mdnice style` },
+      sunset: { label: `Sunset`, desc: `mdnice style` },
+      fresh: { label: `Fresh`, desc: `mdnice style` },
+      ink: { label: `Ink`, desc: `magazine` },
     },
     fontFamily: {
       sansSerif: { label: `Sans`, desc: `Font123Abc` },

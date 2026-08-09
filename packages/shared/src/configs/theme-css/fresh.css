@@ -1,0 +1,154 @@
+/**
+ * Fresh theme — light underline headings, minimal and clean.
+ * Original implementation for this project.
+ * Use var(--md-primary-color) for theme color instead of hard-coded values.
+ */
+
+/* ==================== H1 ==================== */
+h1 {
+  display: table;
+  margin: 2em auto 1.2em;
+  padding: 0 0.3em 0.15em;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 1.25);
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to top, var(--md-primary-color) 0, var(--md-primary-color) 0.35em, transparent 0.35em)
+    no-repeat;
+}
+
+/* ==================== H2 ==================== */
+h2 {
+  display: table;
+  margin: 3.2em auto 1.6em;
+  padding: 0 0.4em 0.1em;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 1.15);
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid var(--md-primary-color);
+}
+
+/* ==================== H3 ==================== */
+h3 {
+  margin: 2em 8px 0.8em 0;
+  color: var(--md-primary-color);
+  font-size: calc(var(--md-font-size) * 1.05);
+  font-weight: bold;
+}
+
+h3::before {
+  content: '# ';
+  opacity: 0.6;
+}
+
+/* ==================== H4 ==================== */
+h4 {
+  margin: 1.6em 8px 0.5em;
+  color: hsl(var(--foreground));
+  font-size: var(--md-font-size);
+  font-weight: bold;
+}
+
+/* ==================== Paragraph ==================== */
+p {
+  margin: 1.3em 8px;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  color: hsl(var(--foreground));
+}
+
+/* ==================== Blockquote ==================== */
+blockquote {
+  font-style: normal;
+  padding: 0.2em 1em;
+  border-left: 3px solid var(--md-primary-color);
+  color: #777;
+  background: transparent;
+  margin: 1.3em 8px;
+}
+
+blockquote > p {
+  margin: 0.8em 0;
+  color: #777;
+}
+
+/* ==================== Emphasis ==================== */
+strong {
+  color: hsl(var(--foreground));
+  font-weight: bold;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0.06) 0.4em, transparent 0.4em) no-repeat;
+}
+
+/* ==================== Links ==================== */
+a {
+  color: var(--md-primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid currentcolor;
+}
+
+/* ==================== Lists ==================== */
+ul,
+ol {
+  margin: 1.2em 8px;
+  padding-left: 1.4em;
+  color: hsl(var(--foreground));
+}
+
+li {
+  margin: 0.35em 0;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+ul li::marker,
+ol li::marker {
+  color: var(--md-primary-color);
+}
+
+/* ==================== Horizontal rule ==================== */
+hr {
+  border: none;
+  border-top: 1px dashed var(--md-primary-color);
+  margin: 2.2em 8px;
+}
+
+/* ==================== Inline code ==================== */
+p code,
+li code {
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  color: var(--md-primary-color);
+  background: var(--blockquote-background);
+  font-size: 0.9em;
+}
+
+/* ==================== Images ==================== */
+img {
+  border-radius: 4px;
+}
+
+figcaption {
+  margin-top: 0.5em;
+  color: #999;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+/* ==================== Tables ==================== */
+table {
+  border-collapse: collapse;
+  margin: 1.3em 8px;
+}
+
+th {
+  border-bottom: 2px solid var(--md-primary-color);
+  color: hsl(var(--foreground));
+  font-weight: bold;
+  padding: 0.5em 0.9em;
+}
+
+td {
+  padding: 0.5em 0.9em;
+  border-bottom: 1px solid #eee;
+}

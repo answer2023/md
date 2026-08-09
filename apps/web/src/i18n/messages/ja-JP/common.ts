@@ -201,6 +201,10 @@ export default {
       default: { label: `クラシック`, desc: `` },
       grace: { label: `Grace`, desc: `{'@'}brzhang` },
       simple: { label: `シンプル`, desc: `{'@'}okooo5km` },
+      azure: { label: `湛藍`, desc: `mdnice 風` },
+      sunset: { label: `暖橙`, desc: `mdnice 風` },
+      fresh: { label: `青葱`, desc: `mdnice 風` },
+      ink: { label: `墨韻`, desc: `マガジン` },
     },
     fontFamily: {
       sansSerif: { label: `ゴシック`, desc: `Font123Abc` },

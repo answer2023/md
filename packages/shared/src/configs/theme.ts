@@ -25,6 +25,26 @@ export const themeOptionsMap = {
     value: `simple`,
     desc: `@okooo5km`,
   },
+  azure: {
+    label: `湛蓝`,
+    value: `azure`,
+    desc: `mdnice 风`,
+  },
+  sunset: {
+    label: `暖橙`,
+    value: `sunset`,
+    desc: `mdnice 风`,
+  },
+  fresh: {
+    label: `青葱`,
+    value: `fresh`,
+    desc: `mdnice 风`,
+  },
+  ink: {
+    label: `墨韵`,
+    value: `ink`,
+    desc: `杂志长文`,
+  },
 }
 
 export const themeOptions: IConfigOption<ThemeName>[] = [
@@ -42,5 +62,25 @@ export const themeOptions: IConfigOption<ThemeName>[] = [
     label: `简洁`,
     value: `simple`,
     desc: `@okooo5km`,
+  },
+  {
+    label: `湛蓝`,
+    value: `azure`,
+    desc: `mdnice 风`,
+  },
+  {
+    label: `暖橙`,
+    value: `sunset`,
+    desc: `mdnice 风`,
+  },
+  {
+    label: `青葱`,
+    value: `fresh`,
+    desc: `mdnice 风`,
+  },
+  {
+    label: `墨韵`,
+    value: `ink`,
+    desc: `杂志长文`,
   },
 ]
