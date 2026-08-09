@@ -115,9 +115,8 @@ export default {
   },
   fund: {
     title: `サポート`,
-    description: `このプロジェクトが気に入ったら、以下の方法でサポートできます。`,
-    qrAlt1: `サポート QR コード 1`,
-    qrAlt2: `サポート QR コード 2`,
+    description: `このツールでより良い記事が書けたなら、コーヒーを一杯おごってください ☕`,
+    qrAlt: `微信投げ銭 QR コード`,
   },
   markdownHelp: {
     title: `Markdown 構文ヘルプ`,

@@ -115,9 +115,8 @@ export default {
   },
   fund: {
     title: `Support`,
-    description: `If you like this project, you can support us in the following ways.`,
-    qrAlt1: `Support QR code 1`,
-    qrAlt2: `Support QR code 2`,
+    description: `If this tool helped you write something better, buy me a coffee ☕`,
+    qrAlt: `WeChat reward QR code`,
   },
   markdownHelp: {
     title: `Markdown Syntax Help`,
