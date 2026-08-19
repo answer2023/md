@@ -46,11 +46,11 @@ function openKeyboardShortcuts() {
 }
 
 function openFeedback() {
-  window.open(`https://github.com/doocs/md/issues`, `_blank`)
+  window.open(`https://github.com/answer2023/md/issues`, `_blank`)
 }
 
 function openReleases() {
-  window.open(`https://github.com/doocs/md/releases`, `_blank`)
+  window.open(`https://github.com/answer2023/md/releases`, `_blank`)
 }
 </script>
 

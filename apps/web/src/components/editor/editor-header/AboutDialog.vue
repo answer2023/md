@@ -20,10 +20,10 @@ const dialogOpen = computed({
   set: (val: boolean) => emit(`update:open`, val),
 })
 
+// This fork first, then upstream credit. Labels are proper nouns, no i18n needed.
 const links = [
-  { label: `GitHub`, url: `https://github.com/doocs/md` },
-  { label: `Gitee`, url: `https://gitee.com/doocs/md` },
-  { label: `GitCode`, url: `https://gitcode.com/doocs/md` },
+  { label: `GitHub`, url: `https://github.com/answer2023/md` },
+  { label: `doocs/md`, url: `https://github.com/doocs/md` },
 ]
 
 function onRedirect(url: string) {

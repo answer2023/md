@@ -114,7 +114,7 @@ export function buildShareGateHtml(
       <button type="submit">查看内容</button>
     </form>
     <div class="footer">
-      ${options.author ? buildShareAuthorHtml(options.author) : `由 doocs/md 分享`}
+      ${options.author ? buildShareAuthorHtml(options.author) : `由 md.tangzhihong.com 分享`}
     </div>
   </div>
 </body>
