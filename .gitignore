@@ -16,6 +16,9 @@ dist
 .DS_Store
 .env.local
 .dev.vars
+# wrangler also reads .dev.vars.<env>; keep the checked-in template out of the pattern
+.dev.vars.*
+!.dev.vars.example
 .env.development.local
 .env.test.local
 .env.production.local
@@ -51,6 +54,9 @@ yarn.lock
 .output
 web-ext.config.ts
 .wrangler
+
+# D1 dumps from `pnpm api db:backup` — contain user documents, never commit
+apps/api/backups
 
 # Claude Code local settings
 .claude/settings.local.json

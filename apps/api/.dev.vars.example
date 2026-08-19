@@ -1,3 +1,5 @@
+# 本地开发来源白名单，覆盖 wrangler.toml 的 APP_URL（生产配置只列线上域名）
+APP_URL=http://localhost:5173,https://md.tangzhihong.com
 GITHUB_CLIENT_ID=
 GITHUB_CLIENT_SECRET=
 JWT_SECRET=

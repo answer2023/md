@@ -9,6 +9,7 @@
     "deploy": "wrangler deploy --minify",
     "db:migrate:local": "wrangler d1 migrations apply md-sync --local",
     "db:migrate:remote": "wrangler d1 migrations apply md-sync --remote",
+    "db:backup": "mkdir -p backups && wrangler d1 export md-sync --remote --output backups/md-sync-$(date +%Y%m%d-%H%M).sql",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
