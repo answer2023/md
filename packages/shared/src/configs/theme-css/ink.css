@@ -6,6 +6,10 @@
 
 /* ==================== H1 ==================== */
 h1 {
+  /* reset default.css shrink-wrap box and primary underline */
+  display: block;
+  padding: 0;
+  border-bottom: none;
   margin: 2.2em 8px 1.4em;
   color: hsl(var(--foreground));
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
@@ -19,7 +23,9 @@ h1 {
 h2 {
   display: table;
   margin: 3.6em auto 1.8em;
-  padding-bottom: 0.35em;
+  /* reset default.css pill: side padding and primary fill */
+  padding: 0 0 0.35em;
+  background: transparent;
   color: hsl(var(--foreground));
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: calc(var(--md-font-size) * 1.2);
@@ -31,6 +37,9 @@ h2 {
 
 /* ==================== H3 ==================== */
 h3 {
+  /* reset default.css left bar; ink marks h3 with the ::before square */
+  padding-left: 0;
+  border-left: none;
   margin: 2.2em 8px 0.9em 0;
   color: hsl(var(--foreground));
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
@@ -52,6 +61,27 @@ h3::before {
 h4 {
   margin: 1.8em 8px 0.6em;
   color: hsl(var(--foreground));
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: var(--md-font-size);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+/* ==================== H5 ==================== */
+h5 {
+  margin: 1.5em 8px 0.5em;
+  color: hsl(var(--foreground));
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: var(--md-font-size);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+/* ==================== H6 ==================== */
+h6 {
+  margin: 1.5em 8px 0.5em;
+  color: #777;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: var(--md-font-size);
   font-weight: bold;
   letter-spacing: 0.08em;
@@ -63,6 +93,7 @@ p {
   letter-spacing: 0.1em;
   line-height: 2;
   color: hsl(var(--foreground));
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   text-align: justify;
 }
 
@@ -74,6 +105,8 @@ blockquote {
   border-left: none;
   color: #777;
   background: transparent;
+  /* the 「」 pseudo-elements take their family from here */
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   text-align: center;
 }
 
@@ -126,6 +159,7 @@ ol {
   margin: 1.4em 8px;
   padding-left: 1.5em;
   color: hsl(var(--foreground));
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
 }
 
 li {
@@ -134,21 +168,15 @@ li {
   letter-spacing: 0.1em;
 }
 
-ul li::marker {
-  content: '— ';
-  color: var(--md-primary-color);
-}
-
-ol li::marker {
-  color: var(--md-primary-color);
-}
-
 /* ==================== Horizontal rule ==================== */
 hr {
   border: none;
   margin: 2.8em 8px;
   text-align: center;
   height: auto;
+  /* reset default.css scale(1, 0.5), which would squash the ◆ decoration to half height */
+  -webkit-transform: none;
+  transform: none;
 }
 
 hr::before {
@@ -158,12 +186,16 @@ hr::before {
   font-size: 0.7em;
   letter-spacing: 1em;
   text-indent: 1em;
+  /* juice turns this into a span next to the void hr, so it cannot inherit hr's alignment */
+  text-align: center;
 }
 
 /* ==================== Inline code ==================== */
-p code,
-li code {
+/* .codespan is the rendered class; `p code` (1-0-2) loses to default.css .codespan (1-1-0) */
+.codespan {
   padding: 0.15em 0.4em;
+  /* reset default.css primary-tinted border */
+  border: none;
   border-radius: 3px;
   color: var(--md-primary-color);
   background: var(--blockquote-background);
@@ -191,14 +223,21 @@ table {
 }
 
 th {
+  /* reset default.css full grid and tinted fill; ink rules are horizontal only */
+  border: none;
+  background: transparent;
   border-top: 2px solid hsl(var(--foreground));
   border-bottom: 1px solid hsl(var(--foreground));
   color: hsl(var(--foreground));
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-weight: bold;
   padding: 0.55em 0.9em;
 }
 
 td {
   padding: 0.55em 0.9em;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  /* reset default.css full grid */
+  border: none;
   border-bottom: 1px solid #e5e5e5;
 }

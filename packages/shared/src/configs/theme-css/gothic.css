@@ -12,6 +12,9 @@ section,
 
 /* ==================== H1 ==================== */
 h1 {
+  /* reset default.css shrink-wrap box and primary underline */
+  display: block;
+  border-bottom: none;
   margin: 2.2em 8px 1.2em;
   padding: 0.4em 0.5em;
   color: #111;
@@ -26,6 +29,10 @@ h1 {
 
 /* ==================== H2 ==================== */
 h2 {
+  /* reset default.css pill: shrink-wrap box, side padding and primary fill */
+  display: block;
+  padding: 0;
+  background: transparent;
   margin: 2em 8px 1.2em;
   color: #111;
   font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
@@ -39,6 +46,9 @@ h2 {
 
 /* ==================== H3 ==================== */
 h3 {
+  /* reset default.css left bar; keep its 8px indent so h3 lines up with body text */
+  border-left: none;
+  padding-left: 8px;
   margin: 1.8em 8px 0.8em 0;
   color: #111;
   font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
@@ -50,7 +60,26 @@ h3 {
 h4 {
   margin: 1.6em 8px 0.6em;
   color: #111;
+  font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
   font-size: calc(var(--md-font-size) * 1.02);
+  font-weight: normal;
+}
+
+/* ==================== H5 ==================== */
+h5 {
+  margin: 1.5em 8px 0.5em;
+  color: #111;
+  font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
+  font-size: var(--md-font-size);
+  font-weight: normal;
+}
+
+/* ==================== H6 ==================== */
+h6 {
+  margin: 1.5em 8px 0.5em;
+  color: #6f6f6f;
+  font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
+  font-size: var(--md-font-size);
   font-weight: normal;
 }
 
@@ -71,6 +100,7 @@ blockquote {
   border-left: 1px solid gray;
   color: #6f6f6f;
   background: transparent;
+  font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
 }
 
 blockquote > p {
@@ -107,11 +137,9 @@ ol {
 li {
   margin: 0.3em 0;
   line-height: 1.75;
-}
-
-ul li::marker,
-ol li::marker {
-  color: #900;
+  /* default.css sets li color to hsl(var(--foreground)), which flips to near-white
+     over this theme's fixed paper background in dark mode */
+  color: #111;
 }
 
 /* ==================== Horizontal rule ==================== */
@@ -122,10 +150,12 @@ hr {
 }
 
 /* ==================== Inline code ==================== */
-p code,
-li code {
+/* .codespan is the rendered class; `p code` (1-0-2) loses to default.css .codespan (1-1-0) */
+.codespan {
   padding: 0.1em 0.35em;
   border: 1px solid #ccc;
+  /* reset default.css rounded corners; gothic keeps every box square */
+  border-radius: 0;
   color: #111;
   background: transparent;
   font-size: 0.9em;
@@ -139,6 +169,7 @@ img {
 figcaption {
   margin-top: 0.6em;
   color: #777;
+  font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
   font-size: 0.85em;
   text-align: center;
   text-transform: uppercase;
@@ -152,7 +183,11 @@ table {
 }
 
 th {
+  /* reset default.css full grid and tinted fill; gothic rules are horizontal only */
+  border: none;
+  background: transparent;
   color: #111;
+  font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
   font-weight: bold;
   padding: 0.5em 0.7em;
   border-top: 1px solid #ddd;
@@ -161,7 +196,10 @@ th {
 }
 
 td {
+  /* reset default.css full grid */
+  border: none;
   padding: 0.5em 0.7em;
   color: #111;
+  font-family: Futura, 'Century Gothic', 'Avenir Next', 'PingFang SC', sans-serif;
   border-top: 1px solid #ddd;
 }

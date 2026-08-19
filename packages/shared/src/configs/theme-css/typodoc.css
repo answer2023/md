@@ -7,33 +7,44 @@
 
 /* ==================== H1 ==================== */
 h1 {
+  /* reset default.css shrink-to-fit table box and centered layout */
+  display: block;
   margin: 1.8em 8px 1em;
-  padding-bottom: 0.3em;
+  padding: 0 0 0.3em;
   color: hsl(var(--foreground));
   font-size: calc(var(--md-font-size) * 1.5);
   font-weight: bold;
   line-height: 1.4;
+  text-align: left;
   border-bottom: 1px solid #e5e5e5;
 }
 
 /* ==================== H2 ==================== */
 h2 {
+  /* reset default.css pill: table box, primary background, centered text */
+  display: block;
   margin: 2.2em 8px 1em;
-  padding-bottom: 0.3em;
+  padding: 0 0 0.3em;
   color: hsl(var(--foreground));
+  background: transparent;
   font-size: calc(var(--md-font-size) * 1.3);
   font-weight: bold;
   line-height: 1.4;
+  text-align: left;
   border-bottom: 1px solid #e5e5e5;
 }
 
 /* ==================== H3 ==================== */
 h3 {
-  margin: 1.8em 8px 0.8em 0;
+  /* left margin absorbs default.css padding-left so text stays flush with p */
+  margin: 1.8em 8px 0.8em;
+  padding-left: 0;
   color: hsl(var(--foreground));
   font-size: calc(var(--md-font-size) * 1.15);
   font-weight: bold;
   line-height: 1.4;
+  /* reset default.css accent bar */
+  border-left: none;
 }
 
 /* ==================== H4 ==================== */
@@ -41,6 +52,22 @@ h4 {
   margin: 1.6em 8px 0.6em;
   color: hsl(var(--foreground));
   font-size: var(--md-font-size);
+  font-weight: bold;
+}
+
+/* ==================== H5 ==================== */
+h5 {
+  margin: 1.4em 8px 0.5em;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 0.9);
+  font-weight: bold;
+}
+
+/* ==================== H6 ==================== */
+h6 {
+  margin: 1.4em 8px 0.5em;
+  color: #6a737d;
+  font-size: calc(var(--md-font-size) * 0.85);
   font-weight: bold;
 }
 
@@ -101,9 +128,10 @@ hr {
 }
 
 /* ==================== Inline code ==================== */
-p code,
-li code {
+/* .codespan is the class the renderer emits; `p code` loses to default.css on specificity */
+.codespan {
   padding: 0.2em 0.4em;
+  border: none;
   border-radius: 4px;
   color: hsl(var(--foreground));
   background: rgba(0, 0, 0, 0.05);

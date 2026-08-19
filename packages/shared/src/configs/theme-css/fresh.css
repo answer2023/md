@@ -9,6 +9,7 @@ h1 {
   display: table;
   margin: 2em auto 1.2em;
   padding: 0 0.3em 0.15em;
+  border-bottom: none; /* reset default.css rule line; this theme underlines with the gradient below */
   color: hsl(var(--foreground));
   font-size: calc(var(--md-font-size) * 1.25);
   font-weight: bold;
@@ -23,6 +24,7 @@ h2 {
   margin: 3.2em auto 1.6em;
   padding: 0 0.4em 0.1em;
   color: hsl(var(--foreground));
+  background: transparent; /* reset default.css pill background */
   font-size: calc(var(--md-font-size) * 1.15);
   font-weight: bold;
   text-align: center;
@@ -31,7 +33,9 @@ h2 {
 
 /* ==================== H3 ==================== */
 h3 {
-  margin: 2em 8px 0.8em 0;
+  margin: 2em 8px 0.8em;
+  padding-left: 0; /* reset default.css indent that made room for its left bar */
+  border-left: none; /* this theme marks h3 with the '#' prefix instead */
   color: var(--md-primary-color);
   font-size: calc(var(--md-font-size) * 1.05);
   font-weight: bold;
@@ -47,6 +51,22 @@ h4 {
   margin: 1.6em 8px 0.5em;
   color: hsl(var(--foreground));
   font-size: var(--md-font-size);
+  font-weight: bold;
+}
+
+/* ==================== H5 ==================== */
+h5 {
+  margin: 1.4em 8px 0.5em;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 0.95);
+  font-weight: bold;
+}
+
+/* ==================== H6 ==================== */
+h6 {
+  margin: 1.4em 8px 0.5em;
+  color: #777;
+  font-size: calc(var(--md-font-size) * 0.95);
   font-weight: bold;
 }
 
@@ -101,11 +121,6 @@ li {
   letter-spacing: 0.05em;
 }
 
-ul li::marker,
-ol li::marker {
-  color: var(--md-primary-color);
-}
-
 /* ==================== Horizontal rule ==================== */
 hr {
   border: none;
@@ -114,9 +129,9 @@ hr {
 }
 
 /* ==================== Inline code ==================== */
-p code,
-li code {
+.codespan {
   padding: 0.15em 0.4em;
+  border: none; /* reset default.css .codespan border */
   border-radius: 3px;
   color: var(--md-primary-color);
   background: var(--blockquote-background);
@@ -142,13 +157,16 @@ table {
 }
 
 th {
+  border: none; /* reset default.css full grid; this theme rules horizontally only */
   border-bottom: 2px solid var(--md-primary-color);
   color: hsl(var(--foreground));
+  background: transparent; /* reset default.css header fill */
   font-weight: bold;
   padding: 0.5em 0.9em;
 }
 
 td {
   padding: 0.5em 0.9em;
+  border: none;
   border-bottom: 1px solid #eee;
 }

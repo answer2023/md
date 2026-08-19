@@ -4,11 +4,18 @@
  * parameters of a user-provided Typora stylesheet (purple).
  */
 
+/* ==================== Container ==================== */
+section,
+#output .container {
+  background: #fff;
+}
+
 /* ==================== H1 ==================== */
 h1 {
   display: table;
   margin: 1.8em auto 1.6em;
-  padding-bottom: 0.25em;
+  /* padding shorthand resets default.css side padding; only the bottom gap is wanted */
+  padding: 0 0 0.25em;
   color: #8064a9;
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: calc(var(--md-font-size) * 1.4);
@@ -20,30 +27,58 @@ h1 {
 
 /* ==================== H2 ==================== */
 h2 {
+  /* display/background/text-align reset default.css primary-color pill */
+  display: block;
   margin: 2em 8px 1em;
-  padding-left: 0.4em;
+  padding: 0 0 0 0.4em;
   color: #8064a9;
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: calc(var(--md-font-size) * 1.25);
   font-weight: normal;
+  text-align: left;
+  background: transparent;
   border-left: 0.4em solid #8064a9;
   border-bottom: 1px solid #8064a9;
 }
 
 /* ==================== H3 ==================== */
 h3 {
+  /* padding/border reset default.css left bar; only h2 carries a bar here */
   margin: 1.8em 8px 0.8em 0;
+  padding-left: 0;
   color: #8064a9;
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: calc(var(--md-font-size) * 1.12);
   font-weight: normal;
+  /* default.css h3 forces 1.2; restore the base rhythm h2/h4-h6 inherit */
+  line-height: 1.75;
+  border-left: none;
 }
 
 /* ==================== H4 ==================== */
 h4 {
   margin: 1.6em 8px 0.6em;
   color: #8064a9;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: calc(var(--md-font-size) * 1.02);
+  font-weight: normal;
+}
+
+/* ==================== H5 ==================== */
+h5 {
+  margin: 1.4em 8px 0.5em;
+  color: #8064a9;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: calc(var(--md-font-size) * 1);
+  font-weight: normal;
+}
+
+/* ==================== H6 ==================== */
+h6 {
+  margin: 1.4em 8px 0.5em;
+  color: #745fb5;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: calc(var(--md-font-size) * 0.95);
   font-weight: normal;
 }
 
@@ -100,11 +135,6 @@ li {
   line-height: 1.7;
 }
 
-ul li::marker,
-ol li::marker {
-  color: #8064a9;
-}
-
 /* ==================== Horizontal rule ==================== */
 hr {
   border: none;
@@ -113,9 +143,10 @@ hr {
 }
 
 /* ==================== Inline code ==================== */
-p code,
-li code {
+/* .codespan is the class the renderer emits; `p code, li code` loses to default.css on specificity */
+.codespan {
   padding: 0.15em 0.4em;
+  border: none; /* reset default.css .codespan primary-color border */
   border-radius: 4px;
   color: #745fb5;
   background: #f4f2f9;

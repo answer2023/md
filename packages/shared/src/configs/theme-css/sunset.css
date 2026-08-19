@@ -6,6 +6,8 @@
 
 /* ==================== H1 ==================== */
 h1 {
+  /* reset default.css `display: table`, which would shrink the rules to text width */
+  display: block;
   padding: 0.4em 0;
   margin: 2em 8px 1.2em;
   color: hsl(var(--foreground));
@@ -18,6 +20,8 @@ h1 {
 
 /* ==================== H2 ==================== */
 h2 {
+  /* reset default.css `display: table` so the gradient reads as a full-width banner */
+  display: block;
   padding: 0.35em 0.8em;
   margin: 3.5em 8px 1.8em;
   color: #fff;
@@ -25,6 +29,8 @@ h2 {
   border-radius: 6px 24px 6px 24px;
   font-size: calc(var(--md-font-size) * 1.15);
   font-weight: bold;
+  /* reset default.css centering; the 0.8em inset is meant to hold left-aligned text */
+  text-align: left;
 }
 
 /* ==================== H3 ==================== */
@@ -43,6 +49,22 @@ h4 {
   margin: 1.8em 8px 0.6em;
   color: var(--md-primary-color);
   font-size: var(--md-font-size);
+  font-weight: bold;
+}
+
+/* ==================== H5 ==================== */
+h5 {
+  margin: 1.6em 8px 0.5em;
+  color: var(--md-primary-color);
+  font-size: calc(var(--md-font-size) * 0.95);
+  font-weight: bold;
+}
+
+/* ==================== H6 ==================== */
+h6 {
+  margin: 1.6em 8px 0.5em;
+  color: var(--md-primary-color);
+  font-size: calc(var(--md-font-size) * 0.9);
   font-weight: bold;
 }
 
@@ -105,11 +127,6 @@ li {
   letter-spacing: 0.08em;
 }
 
-ul li::marker,
-ol li::marker {
-  color: var(--md-primary-color);
-}
-
 /* ==================== Horizontal rule ==================== */
 hr {
   border: none;
@@ -121,9 +138,11 @@ hr {
 }
 
 /* ==================== Inline code ==================== */
-p code,
-li code {
+/* `.codespan` is the class the renderer emits; `p code, li code` loses to it on specificity */
+.codespan {
   padding: 0.15em 0.45em;
+  /* reset default.css outline; this theme uses a borderless tinted chip */
+  border: none;
   border-radius: 4px;
   color: var(--md-primary-color);
   background: var(--blockquote-background);

@@ -13,6 +13,10 @@ section,
 
 /* ==================== H1 ==================== */
 h1 {
+  /* reset default.css shrink-to-fit box and primary-color rule */
+  display: block;
+  padding: 0;
+  border-bottom: none;
   margin: 1.8em 8px 1em;
   color: #1f1f1f;
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
@@ -24,8 +28,12 @@ h1 {
 
 /* ==================== H2 ==================== */
 h2 {
+  /* reset default.css pill background and shrink-to-fit centering: the rule below spans the column */
+  display: block;
+  background: transparent;
+  text-align: left;
   margin: 2.4em 8px 1em;
-  padding-bottom: 0.25em;
+  padding: 0 0 0.25em;
   color: #1f1f1f;
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: calc(var(--md-font-size) * 1.25);
@@ -35,6 +43,9 @@ h2 {
 
 /* ==================== H3 ==================== */
 h3 {
+  /* reset default.css primary-color left bar */
+  padding-left: 0;
+  border-left: none;
   margin: 1.9em 8px 0.8em 0;
   color: #1f1f1f;
   font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
@@ -46,9 +57,28 @@ h3 {
 h4 {
   margin: 1.6em 8px 0.6em;
   color: #1f1f1f;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: var(--md-font-size);
   font-weight: bold;
   font-style: italic;
+}
+
+/* ==================== H5 ==================== */
+h5 {
+  margin: 1.5em 8px 0.5em;
+  color: #1f1f1f;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: var(--md-font-size);
+  font-weight: bold;
+}
+
+/* ==================== H6 ==================== */
+h6 {
+  margin: 1.5em 8px 0.5em;
+  color: #55524b;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  font-size: var(--md-font-size);
+  font-weight: bold;
 }
 
 /* ==================== Paragraph ==================== */
@@ -64,6 +94,7 @@ p {
 /* ==================== Blockquote ==================== */
 blockquote {
   font-style: italic;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   margin: 1.4em 1.2em;
   padding: 0.2em 1em;
   border-left: 2px solid #8a877e;
@@ -106,6 +137,9 @@ li {
   margin: 0.35em 0;
   line-height: 1.9;
   letter-spacing: 0.04em;
+  /* default.css sets li color to hsl(var(--foreground)), which flips to near-white
+     over this theme's fixed paper background in dark mode */
+  color: #2a2a2a;
 }
 
 /* ==================== Horizontal rule ==================== */
@@ -116,9 +150,10 @@ hr {
 }
 
 /* ==================== Inline code ==================== */
-p code,
-li code {
+/* .codespan is the class the renderer emits; `p code, li code` loses to default.css on specificity */
+.codespan {
   padding: 0.15em 0.4em;
+  border: none;
   border-radius: 3px;
   color: #1f1f1f;
   background: #e8e6df;
@@ -135,6 +170,7 @@ img {
 figcaption {
   margin-top: 0.6em;
   color: #8a877e;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-size: 0.85em;
   text-align: center;
   font-style: italic;
@@ -146,15 +182,23 @@ table {
   margin: 1.3em 8px;
 }
 
+/* three-line table: drop default.css full grid and header fill, keep horizontal rules only */
 th {
+  border: none;
   border-top: 2px solid #1f1f1f;
   border-bottom: 1px solid #1f1f1f;
   color: #1f1f1f;
+  background: transparent;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
   font-weight: bold;
   padding: 0.5em 0.9em;
 }
 
 td {
-  padding: 0.5em 0.9em;
+  border: none;
   border-bottom: 1px solid #d8d6cf;
+  /* same dark-mode inversion as li: th already pins its color, td did not */
+  color: #2a2a2a;
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  padding: 0.5em 0.9em;
 }
