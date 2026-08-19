@@ -36,7 +36,10 @@ export async function activateHandler(c: ActivateContext) {
   const remarkLogin = parseGithubLoginFromRemark(order.remark ?? ``)
   const currentLogin = user.login.toLowerCase()
 
-  if (remarkLogin && remarkLogin !== currentLogin)
+  // An order whose remark carries no GitHub login belongs to nobody in particular, so
+  // accepting it here would let any signed-in holder of the order number claim it.
+  // The webhook path already refuses those; keep self-service activation consistent.
+  if (!remarkLogin || remarkLogin !== currentLogin)
     return c.json({ error: `remark_mismatch` }, 403)
 
   const result = await activateProFromOrder(c.env, order, user.login)
