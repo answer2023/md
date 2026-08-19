@@ -7,7 +7,7 @@ export default {
     jaJP: `日本語`,
   },
   meta: {
-    title: `微信 Markdown 编辑器 | Doocs`,
+    title: `微信 Markdown 编辑器`,
     description: `Wechat Markdown Editor | 一款高度简洁的微信 Markdown 编辑器`,
   },
   loader: {
@@ -207,10 +207,10 @@ export default {
       ink: { label: `墨韵`, desc: `杂志长文` },
       typodoc: { label: `文稿`, desc: `Typora 风` },
       newsprint: { label: `报刊`, desc: `Typora 风` },
-      warmpaper: { label: `暖笺`, desc: `Claude 风` },
-      mistblue: { label: `雾蓝`, desc: `Typora 风` },
-      gothic: { label: `哥特`, desc: `Typora 风` },
-      purpletea: { label: `紫青`, desc: `Typora 风` },
+      warmpaper: { label: `暖笺`, desc: `Claude 风 · 固定色` },
+      mistblue: { label: `雾蓝`, desc: `Typora 风 · 固定色` },
+      gothic: { label: `哥特`, desc: `Typora 风 · 固定色` },
+      purpletea: { label: `紫青`, desc: `Typora 风 · 固定色` },
     },
     fontFamily: {
       sansSerif: { label: `无衬线`, desc: `字体123Abc` },

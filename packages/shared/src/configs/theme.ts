@@ -58,22 +58,22 @@ export const themeOptionsMap = {
   warmpaper: {
     label: `暖笺`,
     value: `warmpaper`,
-    desc: `Claude 风`,
+    desc: `Claude 风 · 固定色`,
   },
   mistblue: {
     label: `雾蓝`,
     value: `mistblue`,
-    desc: `Typora 风`,
+    desc: `Typora 风 · 固定色`,
   },
   gothic: {
     label: `哥特`,
     value: `gothic`,
-    desc: `Typora 风`,
+    desc: `Typora 风 · 固定色`,
   },
   purpletea: {
     label: `紫青`,
     value: `purpletea`,
-    desc: `Typora 风`,
+    desc: `Typora 风 · 固定色`,
   },
 }
 
@@ -126,21 +126,21 @@ export const themeOptions: IConfigOption<ThemeName>[] = [
   {
     label: `暖笺`,
     value: `warmpaper`,
-    desc: `Claude 风`,
+    desc: `Claude 风 · 固定色`,
   },
   {
     label: `雾蓝`,
     value: `mistblue`,
-    desc: `Typora 风`,
+    desc: `Typora 风 · 固定色`,
   },
   {
     label: `哥特`,
     value: `gothic`,
-    desc: `Typora 风`,
+    desc: `Typora 风 · 固定色`,
   },
   {
     label: `紫青`,
     value: `purpletea`,
-    desc: `Typora 风`,
+    desc: `Typora 风 · 固定色`,
   },
 ]

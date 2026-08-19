@@ -7,7 +7,7 @@ export default {
     jaJP: `日本語`,
   },
   meta: {
-    title: `WeChat Markdown Editor | Doocs`,
+    title: `WeChat Markdown Editor`,
     description: `Wechat Markdown Editor | A minimalist Markdown editor for WeChat Official Accounts`,
   },
   loader: {
@@ -207,10 +207,10 @@ export default {
       ink: { label: `Ink`, desc: `magazine` },
       typodoc: { label: `Document`, desc: `Typora style` },
       newsprint: { label: `Newsprint`, desc: `Typora style` },
-      warmpaper: { label: `Warmpaper`, desc: `Claude style` },
-      mistblue: { label: `Mist Blue`, desc: `Typora style` },
-      gothic: { label: `Gothic`, desc: `Typora style` },
-      purpletea: { label: `Purple Tea`, desc: `Typora style` },
+      warmpaper: { label: `Warmpaper`, desc: `Claude style · fixed palette` },
+      mistblue: { label: `Mist Blue`, desc: `Typora style · fixed palette` },
+      gothic: { label: `Gothic`, desc: `Typora style · fixed palette` },
+      purpletea: { label: `Purple Tea`, desc: `Typora style · fixed palette` },
     },
     fontFamily: {
       sansSerif: { label: `Sans`, desc: `Font123Abc` },
