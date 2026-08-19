@@ -3,6 +3,9 @@ import { DEFAULT_PDF_EXPORT_OPTIONS, normalizePdfExportOptions } from '@/service
 import { store } from '@/storage'
 import { addPrefix } from '@/storage/prefix'
 
+/** Viewport width at or below which the layout switches to mobile behaviour. */
+const MOBILE_BREAKPOINT = 768
+
 /** Global UI state: dark mode, sidebars, dialogs, view mode, etc. */
 export const useUIStore = defineStore(`ui`, () => {
   const isDark = useDark()
@@ -15,8 +18,12 @@ export const useUIStore = defineStore(`ui`, () => {
 
   const isOpenRightSlider = store.reactive(addPrefix(`is_open_right_slider`), false)
 
-  // mdnice-style: post list sidebar is visible by default on first visit
-  const isOpenPostSlider = store.reactive(addPrefix(`is_open_post_slider`), true)
+  // mdnice-style: post list sidebar starts open on desktop. On mobile it renders as a
+  // full-screen overlay, so defaulting it open would bury the editor on first visit.
+  const isOpenPostSlider = store.reactive(
+    addPrefix(`is_open_post_slider`),
+    typeof window !== `undefined` && window.innerWidth > MOBILE_BREAKPOINT,
+  )
 
   const isOpenFolderPanel = store.reactive(addPrefix(`is_open_folder_panel`), false)
 
@@ -213,7 +220,7 @@ export const useUIStore = defineStore(`ui`, () => {
 
   function handleResize() {
     const wasMobile = isMobile.value
-    isMobile.value = window.innerWidth <= 768
+    isMobile.value = window.innerWidth <= MOBILE_BREAKPOINT
 
     if (!wasMobile && isMobile.value && viewMode.value === `split`) {
       // Desktop → mobile while split: collapse to edit and remember for restore
